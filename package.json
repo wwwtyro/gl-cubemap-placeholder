@@ -1,0 +1,19 @@
+{
+  "name": "gl-cubemap-placeholder",
+  "version": "1.0.0",
+  "description": "Simple debug cubemap generator.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "stackgl",
+    "cubemap",
+    "skybox"
+  ],
+  "author": "Rye Terrell <ryeterrell@ryeterrell.net> (http://wwwtyro.github.io)",
+  "license": "Unlicense",
+  "dependencies": {
+    "gl-texture2d": "^2.0.10"
+  }
+}
