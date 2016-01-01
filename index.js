@@ -14,13 +14,13 @@ module.exports = function genTextures (gl, size) {
     var sign = signs[i]
     for (var j = 0; j < axes.length; j++) {
       var axis = axes[j]
+      var canvas = document.createElement('canvas')
+      canvas.width = canvas.height = size
+      var ctx = canvas.getContext('2d')
       if (axis === 'x' || axis === 'z') {
         ctx.translate(size, size)
         ctx.rotate(Math.PI)
       }
-      var canvas = document.createElement('canvas')
-      canvas.width = canvas.height = size
-      var ctx = canvas.getContext('2d')
       ctx.fillStyle = 'rgb(0,64,128)'
       ctx.fillRect(0, 0, size, size)
       ctx.fillStyle = 'white'
@@ -32,8 +32,8 @@ module.exports = function genTextures (gl, size) {
       ctx.fillText(sign + '-' + axis, size / 2, size / 2)
       ctx.strokeStyle = 'rgb(0,64,128)'
       ctx.strokeRect(0, 0, size, size)
-      textures[sign][axis] = createTextureCube(gl, canvas)
+      textures[sign][axis] = canvas
     }
   }
-  return textures
+  return createTextureCube(gl, textures)
 }
