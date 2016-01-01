@@ -15,5 +15,14 @@
   "license": "Unlicense",
   "dependencies": {
     "gl-texture2d": "^2.0.10"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wwwtyro/gl-cubemap-placeholder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wwwtyro/gl-cubemap-placeholder/issues"
+  },
+  "homepage": "https://github.com/wwwtyro/gl-cubemap-placeholder#readme"
 }
